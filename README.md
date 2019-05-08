@@ -8,7 +8,7 @@
 - Forget to add test for your types
 - Publish types for consumer use while they're in a "weak" state
 
-## [Step 1](./src/step1/README.md) - Compiling in "loose mode"
+## [Step 1](/src/step1/README.md) - Compiling in "loose mode"
 
 - Start with test passing
 - Rename all `.js` to `.ts`, allowing implicit any
@@ -18,7 +18,7 @@
 
 > MAKE A PULL REQUEST!
 
-## Step 2 - Explicit Any
+## [Step 2](/src/step2/README.md) - Explicit Any
 
 - Start with tests passing
 - Ban implicit any `"noImplicitAny": true`
@@ -29,7 +29,7 @@
 
 > MAKE A PULL REQUEST!
 
-## Step 3 - Squash explicit anys, enable strict mode
+## [Step 3](/src/step3/README.md) - Squash explicit anys, enable strict mode
 
 - Incrementally, in small chunks...
 - Enable strict mode

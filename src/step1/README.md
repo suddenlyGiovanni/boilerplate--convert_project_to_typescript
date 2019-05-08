@@ -1,4 +1,4 @@
-# [Step 1](./src/step1/README.md) - Compiling in "loose mode"
+# Step 1 - Compiling in "loose mode"
 
 - Start with test passing
 - Rename all `.js` to `.ts`, allowing implicit any
