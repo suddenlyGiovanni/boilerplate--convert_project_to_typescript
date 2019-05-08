@@ -1,0 +1,55 @@
+{
+  "name": "boilerplate--convert_project_to_typescrip",
+  "version": "1.0.0",
+  "description": "3️⃣Three Step Process to simply (🔥) convert an existing JavaScript project to TypeScript. Kudos to @mike-north",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suddenlyGiovanni/boilerplate--convert_project_to_typescript.git"
+  },
+  "author": "suddenlyGiovanni <ravalico.giovanni@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/suddenlyGiovanni/boilerplate--convert_project_to_typescript/issues"
+  },
+  "homepage": "https://github.com/suddenlyGiovanni/boilerplate--convert_project_to_typescript#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "7.6.0",
+    "@commitlint/config-conventional": "7.6.0",
+    "@types/chai": "4.1.7",
+    "@types/mocha": "5.2.6",
+    "@types/node": "12.0.0",
+    "@typescript-eslint/eslint-plugin": "1.7.0",
+    "@typescript-eslint/parser": "1.7.0",
+    "chai": "4.2.0",
+    "dtslint": "0.7.1",
+    "eslint": "5.16.0",
+    "husky": "1.3.1",
+    "lerna": "3.13.4",
+    "mocha": "6.1.4",
+    "ts-node": "8.1.0",
+    "typescript": "3.4.5"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "clean": "rm -rf lib",
+    "build": "tsc src/index.ts --outDir lib --types node --module commonjs --target ES2017",
+    "test": "mocha"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "./node_modules/.bin/commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  }
+}
