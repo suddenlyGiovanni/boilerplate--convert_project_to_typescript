@@ -8,7 +8,7 @@
 - Forget to add test for your types
 - Publish types for consumer use while they're in a "weak" state
 
-## Step 1 - Compiling in "loose mode"
+## [Step 1](./src/step1/README.md) - Compiling in "loose mode"
 
 - Start with test passing
 - Rename all `.js` to `.ts`, allowing implicit any
@@ -45,5 +45,7 @@
 - Try really hard to avoid unsafe casts (`as`)
 
 > MAKE A PULL REQUEST!
+
+[Next Step](/src/step2/README.md) ->
 
 Kudos to [Mike North](https://github.com/mike-north)
