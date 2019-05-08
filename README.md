@@ -45,3 +45,5 @@
 - Try really hard to avoid unsafe casts (`as`)
 
 > MAKE A PULL REQUEST!
+
+Kudos to [Mike North](https://github.com/mike-north)
