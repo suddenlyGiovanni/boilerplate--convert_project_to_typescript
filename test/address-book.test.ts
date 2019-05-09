@@ -1,8 +1,7 @@
 import { expect } from 'chai'
 import { beforeEach, describe, it } from 'mocha'
-import * as indexExports from '../step1/index.js'
-// import * as indexExports from '../step2/index.ts'
-// import * as indexExports from '../step3/index.ts'
+
+import * as indexExports from '../src/step0/index'
 
 describe('index.ts module', () => {
   // it("should have a Person export (type or interface)", () => {
@@ -26,7 +25,10 @@ describe('index.ts module', () => {
   })
   it('should have a getVcardText export (function)', () => {
     expect(!!indexExports.getVcardText).to.eq(true, 'export exists')
-    expect(typeof indexExports.getVcardText).to.eq('function', 'it is a function')
+    expect(typeof indexExports.getVcardText).to.eq(
+      'function',
+      'it is a function'
+    )
     expect(indexExports.getVcardText.prototype).to.deep.eq({})
 
     // expect(indexExports.getVcardText.prototype.name).to.eq("function");
@@ -41,22 +43,26 @@ describe('AddressBook', () => {
 
   it('should have an addContact() function', () => {
     expect(typeof ab.addContact).to.eq('function', 'addContact is a function')
-    expect(indexExports.AddressBook.prototype.hasOwnProperty('addContact')).to.eq(
-      true,
-      'function is on the AddressBook prototype'
-    )
+    expect(
+      indexExports.AddressBook.prototype.hasOwnProperty('addContact')
+    ).to.eq(true, 'function is on the AddressBook prototype')
   })
 
   it('should have an findContactByName() function', () => {
-    expect(typeof ab.findContactByName).to.eq('function', 'findContactByName is a function')
-    expect(indexExports.AddressBook.prototype.hasOwnProperty('findContactByName')).to.eq(
-      true,
-      'function is on the AddressBook prototype'
+    expect(typeof ab.findContactByName).to.eq(
+      'function',
+      'findContactByName is a function'
     )
+    expect(
+      indexExports.AddressBook.prototype.hasOwnProperty('findContactByName')
+    ).to.eq(true, 'function is on the AddressBook prototype')
   })
 
   it('should have "contacts" member data', () => {
-    expect(ab.hasOwnProperty('contacts')).to.eq(true, 'it is not on the prototype')
+    expect(ab.hasOwnProperty('contacts')).to.eq(
+      true,
+      'it is not on the prototype'
+    )
   })
 
   it('"contacts" should be an array', () => {
@@ -73,7 +79,7 @@ describe('AddressBook', () => {
       firstName: 'Mike',
       lastName: 'North',
       addresses: {},
-      phones: {}
+      phones: {},
     })
     expect(ab.contacts.length).to.eq(1)
   })
@@ -83,13 +89,13 @@ describe('AddressBook', () => {
       firstName: 'Mike',
       lastName: 'North',
       addresses: {},
-      phones: {}
+      phones: {},
     })
     ab.addContact({
       firstName: 'Nobody',
       lastName: 'North',
       addresses: {},
-      phones: {}
+      phones: {},
     })
     expect(ab.findContactByName({ lastName: '' }).length).to.eq(0)
     expect(ab.findContactByName({ lastName: 'North' }).length).to.eq(2)
@@ -100,13 +106,13 @@ describe('AddressBook', () => {
       firstName: 'Mike',
       lastName: 'North',
       addresses: {},
-      phones: {}
+      phones: {},
     })
     ab.addContact({
       firstName: 'Nobody',
       lastName: 'North',
       addresses: {},
-      phones: {}
+      phones: {},
     })
     expect(ab.findContactByName({ firstName: 'Mike' }).length).to.eq(1)
     expect(ab.findContactByName({ lastName: 'Steve' }).length).to.eq(0)
@@ -117,16 +123,20 @@ describe('AddressBook', () => {
       firstName: 'Mike',
       lastName: 'North',
       addresses: {},
-      phones: {}
+      phones: {},
     })
     ab.addContact({
       firstName: 'Nobody',
       lastName: 'North',
       addresses: {},
-      phones: {}
+      phones: {},
     })
-    expect(ab.findContactByName({ firstName: 'Mike', lastName: 'North' }).length).to.eq(1)
-    expect(ab.findContactByName({ firstName: 'Nobody', lastName: 'North' }).length).to.eq(1)
+    expect(
+      ab.findContactByName({ firstName: 'Mike', lastName: 'North' }).length
+    ).to.eq(1)
+    expect(
+      ab.findContactByName({ firstName: 'Nobody', lastName: 'North' }).length
+    ).to.eq(1)
   })
 })
 
@@ -139,7 +149,7 @@ describe('getVcardText', () => {
           firstName: 'Mike',
           lastName: 'North',
           addresses: {},
-          phones: {}
+          phones: {},
         },
         date
       )
@@ -163,8 +173,8 @@ END:VCARD`
           addresses: {},
           phones: {
             home: '3215551212',
-            office: '3215551200'
-          }
+            office: '3215551200',
+          },
         },
         date
       )
@@ -193,7 +203,7 @@ END:VCARD`
               state: 'MN',
               city: 'Anytown',
               country: 'United States of America',
-              postalCode: 123456
+              postalCode: 123456,
             },
             work: {
               houseNumber: 456,
@@ -201,13 +211,13 @@ END:VCARD`
               state: 'MN',
               city: 'Anytown',
               country: 'United States of America',
-              postalCode: 123456
-            }
+              postalCode: 123456,
+            },
           },
           phones: {
             home: '3215551212',
-            office: '3215551200'
-          }
+            office: '3215551200',
+          },
         },
         date
       )
