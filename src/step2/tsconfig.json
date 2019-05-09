@@ -2,12 +2,6 @@
   "compilerOptions": {
     "target": "ES2015",
     "module": "commonjs",
-    "allowJs": true,
-    "checkJs": true,
-    "outDir": "lib",
-    "noImplicitAny": true /* <- changed this!! */,
-    "esModuleInterop": true
-  },
-  "exclude": ["node_modules"],
-  "include": ["src"]
+    "noImplicitAny": true /* <- changed this to `true`!! */
+  }
 }
