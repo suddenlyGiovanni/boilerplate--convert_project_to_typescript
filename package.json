@@ -30,7 +30,7 @@
     "@typescript-eslint/parser": "1.7.0",
     "chai": "^4.2.0",
     "commitizen": "^3.1.1",
-    "commitlint": "^7.6.0",
+    "commitlint": "^13.1.0",
     "cz-conventional-changelog": "^2.1.0",
     "dtslint": "^0.7.1",
     "eslint": "5.16.0",
